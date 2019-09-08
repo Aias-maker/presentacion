@@ -1,0 +1,36 @@
+<div class='container'>
+
+    <div class="alert alert-primary" role="alert">
+     Presentation page done with fully interactive purposes.
+    </div>
+
+    <h1>Language progamming<span class="badge badge-secondary">Working tools</span></h1>
+    <br><a href="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)" class="badge badge-primary">Java</a></br>
+    <a href="https://es.wikipedia.org/wiki/MySQL" class="badge badge-danger">Mysql</a>
+    <br><a href="#" class="badge badge-dark">And there're more of them</a></br>
+    <br></br>
+
+    <div class= 'row'>
+        <br>
+            <table class='table table-striped'>
+                <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th colspan ="2">Operaciones</th>
+                </tr>
+                </thead>
+                {{#each personas}}
+                    <tr>
+                        <td>{{this.nombres}}</td>
+                        <td>{{this.apellidos}}</td>
+                        <td>{{this.edad}}</td>
+                        <td><a href="/persona/modificar/{{this._id}}">modificar</a></td>    
+                        <td><a href="/persona/eliminar/{{this._id}}">eliminar</a></td>
+                    </tr>
+                {{/each}}
+            </table>
+         <a href="/persona/nuevo" class='btn btn-primary'>Nuevo</a>
+    </div>
+</div>
